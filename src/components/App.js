@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
     this.state = {
       renderBall: false, //variable needed to be changed
-      posi: 0,
+      posi: 5,
       ballPosition: { left: "0px" }
     };
     this.renderChoice = this.renderChoice.bind(this);
