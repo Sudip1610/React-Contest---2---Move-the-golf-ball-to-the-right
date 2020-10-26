@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
     this.state = {
       renderBall: false, //variable needed to be changed
-      posi: 5,
+      posi: 0,
       ballPosition: { left: "0px" }
     };
     this.renderChoice = this.renderChoice.bind(this);
@@ -30,10 +30,12 @@ class App extends Component {
   }
 
   handleKeyRight(e) {
+    let prevPos = this.state.posi;
+    let curPos = Number(prevPos) + 5;
     if (e.keyCode === 39) {
       this.setState({
-        posi: this.state.posi + 5,
-        ballPosition: { left: `${this.state.posi}px` }
+        posi: curPos,
+        ballPosition: { left: `${curPos}px` }
       });
     }
   }
